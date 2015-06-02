@@ -1,0 +1,47 @@
+<!-- simple-suttor.html -->
+<head>
+    <title>Fuck You Sutta</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="header-form-container">
+                    <h1 class="active">I fucked Sutta ({{totalCount}}) times and Saved {{totalSave}}</h1>
+                    <form class="new-incident col-xs-6">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" name="text" placeholder="Simply Fuck you sutta." />
+                        </div>
+                        <input type="submit" class="btn btn-circle btn-lg btn-success" value="-" />
+                    </form>
+                    <form class="set-new-rate col-xs-6">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" name="text" placeholder="Set New Cost/Cig" />
+                        </div>
+                        <input type="submit" class="btn btn-circle btn-lg btn-success" value="{{currentCost}}" />
+                    </form>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <ul class="list-group">
+                {{#each incidents}}
+                {{> incident}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</body>
+
+<template name="incident">
+    <li class="list-group-item list-group-item-success">
+        <button class="delete btn-circle btn-lg">&times;</button>
+        <span>{{text}}</span>
+        <span>Total Saved - {{totalsaved}} </span>
+        <span style="padding: 10px;">Rate -{{avgRate}}</span>
+        <span style="padding: 10px;float: right">On -{{createdAt}}</span>
+    </li>
+</template>
