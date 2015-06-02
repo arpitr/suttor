@@ -1,4 +1,4 @@
 # suttor
 Meteor App
 
-![App Image](http://images.visitcanberra.com.au/images/canberra_hero_image.jpg?raw=true "Optional title")
+![App Image](https://github.com/arpitr/suttor/blob/master/Fuck%20You%20Sutta.png?raw=true "Optional title")
